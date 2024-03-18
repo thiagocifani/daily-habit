@@ -6,12 +6,12 @@ class HabitsController < ApplicationController
 
   def plus
     @habit.increment!(:count)
-    redirect_to habit_path(@habit)
+    render :result
   end
 
   def minus
     @habit.decrement!(:count)
-    redirect_to habit_path(@habit)
+    render :result
   end
 
   private
